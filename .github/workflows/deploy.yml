@@ -1,0 +1,48 @@
+name: Build & Deploy Site
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: Install Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: '1.8.5'
+      - run: julia -e '
+              using Pkg; Pkg.activate("."); Pkg.instantiate();
+              using NodeJS; run(`$(npm_cmd()) install highlight.js`);
+              using Franklin;
+              optimize()'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './__site'
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      pages: write
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
