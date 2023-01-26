@@ -1,5 +1,5 @@
-@def title = "Franklin Example"
-@def tags = ["syntax", "code"]
+@def title = "Professor Charusheela"
+@def tags = ["about", "home"]
 
 # Who is Charu?
 
