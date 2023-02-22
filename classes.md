@@ -22,7 +22,7 @@ Work-In-Progress! Course page will be \style{text-decoration:line-through;}{[her
 Course page is [here](https://intromacro.charusheela.org).
 
 ## Economics of Gender
-Work-In-Progress! Course page will be \style{text-decoration:line-through;}{[here](https://econgender.charusheela.org)}.
+Course page is [here](https://econgender.charusheela.org).
 
 ## Economics of Nonprofits & NGOs
 Work-In-Progress! Course page will be \style{text-decoration:line-through;}{[here](https://econngos.charusheela.org)}.
