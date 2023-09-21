@@ -16,7 +16,7 @@ I want my students to be critical thinkers, but beyond that, I want them to gain
 My role is to help them make that journey.
 
 ## Introductory Microeconomics
-Work-In-Progress! Course page will be \style{text-decoration:line-through;}{[here](https://intromicro.charusheela.org)}.
+Course page is [here](https://intromicro.charusheela.org).
 
 ## Introductory Macroeconomics
 Course page is [here](https://intromacro.charusheela.org).
